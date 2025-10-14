@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "921212213787",
+    "project_id": "tikeapp-bb839",
+    "storage_bucket": "tikeapp-bb839.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921212213787:android:63d4f2e4e1359de157f6be",
+        "android_client_info": {
+          "package_name": "com.example.movie_tickets"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921212213787-lrb3r166fginl7j3rebljqe0e100keg7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCME7Z5H0d1p-fS-kzbJ0MqQBiOmByaL2g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "921212213787-lrb3r166fginl7j3rebljqe0e100keg7.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "921212213787-ughm3hu9kmhag75qudnp01nabbuhupi0.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.movieTickets"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
