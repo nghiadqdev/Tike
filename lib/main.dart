@@ -1,44 +1,15 @@
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:movie_tickets/config/app_theme.dart';
 import 'package:movie_tickets/features/auth/auth.dart';
 import 'package:movie_tickets/features/user/navigation/navigation.dart';
 import 'firebase_options.dart';
-
-// Định nghĩa Light Theme
-final ThemeData lightTheme = ThemeData.from(
-  colorScheme: const ColorScheme(
-    brightness: Brightness.light,
-    primary: Color(0xFF2A437C), // Màu chính
-    onPrimary: Colors.white, // Chữ trên màu chính
-    secondary: Color(0xFFD4AF37), // Màu phụ/nhấn
-    onSecondary: Colors.black, // Chữ trên màu phụ
-    error: Colors.red,
-    onError: Colors.white,
-    surface: Colors.white, // Nền card
-    onSurface: Color(0xFF0A0D21), // Chữ trên card
-  ),
-).copyWith(appBarTheme: const AppBarTheme(backgroundColor: Color(0xFF2A437C)));
-
-// Định nghĩa Dark Theme
-final ThemeData darkTheme = ThemeData.from(
-  colorScheme: const ColorScheme(
-    brightness: Brightness.dark,
-    primary: Color(0xFFFFD700), // Màu chính/nhấn
-    onPrimary: Color(0xFF0A0D21), // Chữ trên màu chính
-    secondary: Color(0xFFFFD700), // Màu phụ
-    onSecondary: Color(0xFF0A0D21), // Chữ trên màu phụ
-    error: Colors.redAccent,
-    onError: Colors.white,
-    surface: Color(0xFF1D1E33), // Nền card
-    onSurface: Colors.white, // Chữ trên card
-  ),
-).copyWith(appBarTheme: const AppBarTheme(backgroundColor: Color(0xFF0A0D21)));
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 void main() async {
+  await dotenv.load(fileName: ".env");
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 
